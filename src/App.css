@@ -1,0 +1,61 @@
+html {
+  font-size: 10px;
+  color: white;
+  background-image: url("../public/blue.jpg");
+  background-repeat: no-repeat;
+}
+
+.weatherCardMain {
+  display: flex;
+  justify-content: center;
+  margin-top: 12rem;
+}
+
+.weatherCard {
+  background-color: #16394c;
+  width: 50rem;
+  margin: 1rem;
+  text-align: center;
+  border:2px solid #608094;
+  border-radius: 1.5rem;
+}
+
+.weatherimgname {
+  float: left;
+  margin-left: 5rem;
+}
+
+.weatherC {
+  margin-left: 7rem;
+  margin-top: 3.2rem;
+  float: left;
+}
+
+.weatherdetail {
+  margin-left: 7rem;
+  float: left;
+}
+.mainp{
+  font-size: 1.4rem;
+  margin-top: -2rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+.temp{
+  clear: left;
+}
+.weather5day{
+  height: 8rem;
+  width: 8rem;
+  margin-left: 1.67rem;
+  float: left;
+  padding-bottom: 1rem;
+}
+.pimg{
+  margin-top: -2rem;
+}
+.ptmp{
+  margin-top: -3rem;
+}
