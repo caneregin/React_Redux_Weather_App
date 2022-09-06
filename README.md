@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# React Redux Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Yayınlandı: https://chic-fox-039e1e.netlify.app/
 
-## Available Scripts
+## Açılış ekranı
+![weatherredux](https://user-images.githubusercontent.com/36435160/188713604-ccfa6ed1-5fbe-4173-b8d1-08a6407a2428.png)
 
-In the project directory, you can run:
+## city, cityLat, cityLon değerleri, 5 gün için 5 hava durumu ve 5 derecesi, basınç, nem, rüzgar değerleri useSelector aracılığıyla redux tarafından çekilir.
+![weatherredux1](https://user-images.githubusercontent.com/36435160/188715763-f8fcd2f3-fd9f-4987-afbd-ca797cb9aafb.png)
 
-### `npm start`
+## week ile haftanın 7 günü array şeklinde tanımlanmıştır. Arrayın sıfırıncı birinci elemanı gibi. Bugünün tarihi newDate getDay ile alınır. bu tarihin 7ye bölümünden kalan ile 5 günün hangi gün oldukları belli olur. city değeri değiştiğinde useEffect axios ile ilgili şehirin lat lon değerleri çekilir ve counter 1 artırılır. counter değiştiğinden ikinci useEffect axios ile bu lat lon değerlerine göre ilgili şehirin hava durumu değerleri çekilir. Bu değerler dispatch aracılığıyla redux tarafına gönderilir ve reducer ile karşılanır.
+![weatherredux2](https://user-images.githubusercontent.com/36435160/188715816-017f4774-2a0d-436e-a31e-1f640fc4bafd.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Gösterilecek veriler burada yazılmıştır.
+![weatherredux3](https://user-images.githubusercontent.com/36435160/188715853-71a12839-cd04-4646-8887-99204514019e.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Şehir değiştirilip submit butona tıklandığında seçilen şehir dispatch changeCity aracılığıyla redux reducer ile karşılanır.
+![weatherredux4](https://user-images.githubusercontent.com/36435160/188715908-d7db69c7-8827-45cc-b16f-cf876f178ef9.png)
 
-### `npm test`
+## initial değerler burada tanımlanmıştır. Varsayılan olarak istanbul ve istanbul lat lon değerleri yazılmıştır.
+![weatherredux5](https://user-images.githubusercontent.com/36435160/188715993-78ddc51e-1c63-4743-8426-3ab212baf2a7.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## changeLatLon reducer ile gelen veriler initial state cityLat ve cityLon içerisine yazılır. changeCity reducer ile gelen veriler initial state city içerisine yazılır. changeWeather reducer ile gelen veriler ilgili initial state içerisine yazılır.
+![weatherredux8](https://user-images.githubusercontent.com/36435160/188716703-d5908e58-99fd-44a6-a6da-bb5cb6e78da3.png)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Redux store
+![weatherredux7](https://user-images.githubusercontent.com/36435160/188716785-16fe7e1e-eb20-48ec-b20e-5e77307e3c4d.png)
